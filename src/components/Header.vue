@@ -1,4 +1,10 @@
-<script setup lang="js">
+<script setup>
+import {ref} from "vue";
+import About from "@/components/About.vue";
+
+// const clickAbout = async () => {
+//   return <About/>;
+// }
 </script>
 
 <template>
@@ -13,7 +19,7 @@
     <ul class="header__nav-list">
       <li class="header__nav-item">
         <img src="./icons/about.png" alt="about" class="nav-icon">
-        <button>О себе</button>
+        <button class = 'header__button-about' @click = 'clickAbout'>О себе</button>
       </li>
 
       <li class="header__nav-item">

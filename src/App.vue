@@ -3,7 +3,7 @@
 
     <main class="app__main">
       <Header />
-
+      <About/>
     </main>
 
   </div>
