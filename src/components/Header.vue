@@ -5,8 +5,9 @@ import {ref} from "vue";
 <template>
   <header class="header">
     <div class="header__description">
-      <img src="./icons/logo.png" alt="logo" class="header__logo">
-      <h2>Vue Portfolio</h2>
+      <router-link to="/home">
+        <img src="./icons/logo.png" alt="logo" class="header__logo">
+      </router-link>
       <p>Портфолио начинающего фронт разработчика</p>
     </div>
 
@@ -41,7 +42,7 @@ import {ref} from "vue";
   display: flex;
   align-items: center;
   gap: 20px;
-  font-family: Monotype Corsiva;
+  font-family: Monotype Corsiva, sans-serif;
 }
 
 .header__logo {
@@ -77,28 +78,6 @@ p {
   margin: 0 auto;
   font-size: 0.9rem;
 }
-
-button {
-  background: none;
-  border: none;
-  padding: 5px 10px;
-  font-family: inherit;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: #333;
-  border-radius: 4px;
-
-  &:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-2px);
-  }
-
-  &:active {
-    transform: translateY(0);
-  }
-  
-}
 .header__button {
   background: none;
   border: none;
@@ -116,7 +95,7 @@ button {
     transform: translateY(-2px);
   }
 
-  /* Стиль активной ссылки */
+
   &.router-link-active {
     font-weight: bold;
     color: #42b983;

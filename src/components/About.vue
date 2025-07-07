@@ -16,7 +16,7 @@ console.log(aboutText);
 </script>
 
 <template>
-  <div class="about--content">
+  <div class="about__content">
     <div class = "about__container">
       <img src = "./icons/meme.jpg" class = 'about__container--image'>
       <p class = "about__container--text">{{aboutText}}</p>
@@ -26,7 +26,7 @@ console.log(aboutText);
 </template>
 
 <style scoped lang="scss">
-.about--content {
+.about__content {
   white-space: pre-line;
   line-height: 1.6;
   padding: 20px;
@@ -44,7 +44,7 @@ console.log(aboutText);
 .about__container--text{
   margin-left: 10px;
   font-size: 16px;
-  font-family: Courier;
+  font-family: Courier, sans-serif;
 }
 .about__container--image{
   width:20%;

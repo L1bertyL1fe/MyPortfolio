@@ -1,13 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import About from '@/components/About.vue';
-import Projects from '@/components/Projects.vue'; // Создай этот компонент позже
-import Goals from '@/components/Goals.vue';      // Создай этот компонент позже
+import Projects from '@/components/Projects.vue';
+import Goals from '@/components/Goals.vue';
+import Home from "@/components/Home.vue";
 
 const routes = [
-  { 
-    path: '/', 
+  {
+    path: '/home',
     name: 'home',
-    component: { template: '<div class="empty-state">Выберите раздел в меню</div>' } 
+    component: Home
   },
   { 
     path: '/about', 
@@ -24,11 +25,6 @@ const routes = [
     name: 'goals',
     component: Goals 
   },
-  // Обработка 404
-  { 
-    path: '/:pathMatch(.*)*', 
-    component: { template: '<div>Страница не найдена</div>' } 
-  }
 ];
 
 const router = createRouter({
