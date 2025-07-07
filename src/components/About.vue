@@ -3,10 +3,10 @@ import {ref} from 'vue';
 
 const aboutText = ref('');
 const readFile = async () => {
-  try{
+  try {
     const response = await fetch('./src/components/text/about.txt');
     aboutText.value = await response.text();
-  }catch(error){
+  } catch(error){
     console.log(error)
   }
 }
